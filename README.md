@@ -40,7 +40,7 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 - **Mutation:**
     ```graphql
     mutation {
-      verify(input: {score: "3x15"}) {
+      verify(score: "3x15") {
         combinations
       }
     }
