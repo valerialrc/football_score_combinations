@@ -1,24 +1,64 @@
-# README
+# Football Score Combinations
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descrição
+API para calcular o número de combinações possíveis de pontuações em um jogo de futebol americano.
 
-Things you may want to cover:
+## Tecnologias Utilizadas
+- Ruby on Rails
+- GraphQL
 
-* Ruby version
+## Como Executar
 
-* System dependencies
+1. Clone o repositório
+2. Execute o script de setup:
+    ```bash
+    bin/setup
+    ```
+3. Acesse a aplicação em `http://localhost:3000`
 
-* Configuration
+## Endpoints
 
-* Database creation
+### API REST
+- **URL:** `/verify`
+- **Método:** `POST`
+- **Corpo da Requisição:**
+    ```json
+    {
+      "score": "3x15"
+    }
+    ```
+- **Resposta:**
+    ```json
+    {
+      "combinations": 4
+    }
+    ```
 
-* Database initialization
+### API GraphQL
+- **URL:** `/graphql`
+- **Método:** `POST`
+- **Mutation:**
+    ```graphql
+    mutation {
+      verify(input: {score: "3x15"}) {
+        combinations
+      }
+    }
+    ```
 
-* How to run the test suite
+- **Resposta:**
+    ```json
+    {
+      "data": {
+        "verify": {
+          "combinations": 4
+        }
+      }
+    }
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Testes
 
-* Deployment instructions
-
-* ...
+Para rodar os testes:
+```bash
+rspec
