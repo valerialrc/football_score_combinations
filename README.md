@@ -19,7 +19,7 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 3. Execute o comando para construir e iniciar os contêineres:
 
     ```bash
-    docker-compose up --build
+    docker-compose up --build -d
     ```
 
 4. Acesse a aplicação em `localhost:3000/graphiql`
@@ -37,8 +37,11 @@ API para calcular o número de combinações possíveis de pontuações em um jo
     ```bash
     bin/setup
     ```
-
-4. Acesse a aplicação em `localhost:3000/graphiql`
+4. Execute o server
+    ```bash
+    rails server
+    ```
+5. Acesse a aplicação em `localhost:3000/graphiql`
 
 
 ## Endpoints
