@@ -6,15 +6,40 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 ## Tecnologias Utilizadas
 - Ruby on Rails
 - GraphQL
+- Docker
 
 ## Como Executar
 
 1. Clone o repositório
-2. Execute o script de setup:
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd football_score_combinations
+    ```
+3. Execute o comando para construir e iniciar os contêineres:
+
+    ```bash
+    docker-compose up --build
+    ```
+
+4. Acesse a aplicação em `localhost:3000/graphiql`
+
+### Sem Docker
+
+1. Clone o repositório
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd football_score_combinations
+    ```
+3. Execute o script de setup:
+
     ```bash
     bin/setup
     ```
-3. Acesse a aplicação em `http://localhost:3000`
+
+4. Acesse a aplicação em `localhost:3000/graphiql`
+
 
 ## Endpoints
 
@@ -60,5 +85,7 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 ## Testes
 
 Para rodar os testes:
+
+### Sem Docker
 ```bash
 rspec
