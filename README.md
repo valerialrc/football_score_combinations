@@ -86,6 +86,10 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 
 Para rodar os testes:
 
+```bash
+docker-compose exec -e RAILS_ENV=test app bundle exec rspec
+```
+
 ### Sem Docker
 ```bash
 rspec
