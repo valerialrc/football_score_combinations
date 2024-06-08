@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
 
   post 'verify', to: 'scores#verify'
+  get 'verify', to: 'scores#verify'
+
 end

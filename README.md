@@ -44,6 +44,8 @@ API para calcular o número de combinações possíveis de pontuações em um jo
 ## Endpoints
 
 ### API REST
+#### Rota POST
+
 - **URL:** `/verify`
 - **Método:** `POST`
 - **Corpo da Requisição:**
@@ -58,7 +60,26 @@ API para calcular o número de combinações possíveis de pontuações em um jo
       "combinations": 4
     }
     ```
+#### Rota GET (apenas para testes)
 
+- **URL:** `/verify`
+- **Método:** `GET`
+- **Parâmetros da Query:**
+  - `score`: Uma string que representa o placar da partida no formato `NxM`.
+    - Tipo: String
+    - Exemplo: `3x15`
+  
+- **Exemplo de Requisição:**
+    ```
+    GET /verify?score=3x15
+    ```
+  
+- **Resposta:**
+    ```json
+    {
+      "combinations": 4
+    }
+    ```
 ### API GraphQL
 - **URL:** `/graphql`
 - **Método:** `POST`
